@@ -22,19 +22,14 @@ public class Solution {
         Pattern pattern = Pattern.compile("[ \\p{Punct}]");
         Matcher matcher;
 
-
         bfr = new BufferedReader(new FileReader(filename1));
         BufferedWriter bfw = new BufferedWriter(new FileWriter(filename2));
-//        int symbol = 0;
+
         while (bfr.ready()) {
-//            symbol = bfr.read();
-//            s = String.valueOf((char) bfr.read());
             s = bfr.readLine();
 //            s = s.replaceAll("!");
             matcher = pattern.matcher(s);
             s = matcher.replaceAll("");
-//            s = matcher.replaceAll("");
-//
 //            while (matcher.find()) {
 //                s = s.replace(matcher.group(), "");
 //            }
